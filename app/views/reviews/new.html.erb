@@ -1,0 +1,8 @@
+<p><%= @restaurant.name %> ------Review:</p>
+<%= form_for([@restaurant,@review]) do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.label :rating %>
+  <%= f.select :rating, options_for_select(0..5) %>
+  <%= f.submit %>
+<% end %>
