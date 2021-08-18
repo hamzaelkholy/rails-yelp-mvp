@@ -1,5 +1,7 @@
+<div class='container'>
 <h1>Restaurants</h1>
 <% @restaurants.each do |resto| %>
-<p> <%= link_to resto.name, restaurant_path(resto) %> </p>
+<p> <%= link_to resto.name, restaurant_path(resto), class: 'text-decoration-none' %> </p>
 <% end%>
-<%= link_to 'create a new resto', new_restaurant_path %>
+<%= link_to 'create a new resto', new_restaurant_path, class: 'text-decoration-none btn btn-primary' %>
+</div>
